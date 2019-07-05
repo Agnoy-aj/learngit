@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件存放CRUD的sql语句 -->
+<mapper namespace="com.shiro.demo.mapper.UserMapper">
+	
+	<select id="findByUsername" parameterType="string" resultType="com.shiro.demo.domain.User">
+      SELECT id,username,password
+      FROM  test_shiro
+      WHERE  username=#{username}
+	</select>
+	
+</mapper>
